@@ -1,0 +1,328 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TASK8 JS</title>
+  </head>
+  <style>
+ 
+    body {
+      display: grid;
+      place-content: center;
+    }
+    table {
+
+      background: linear-gradient( rgb(193, 114, 157) 12%,  rgba(244, 247, 196, 1) 100%);
+      padding: 16px 48px;
+      width: 45rem;
+      height: 40rem;
+  
+    }
+    label {
+      font-weight: bold;
+    }
+    input {
+      width: 70%;
+    }
+    button {
+      border: 2px solid black;
+      border-radius: 10px;
+      background-color: red;
+      color: white;
+      font-weight: bold;
+    }
+    #button {
+        text-align: center;
+    }
+    button:hover{
+      opacity:0.3;
+    }
+    span{
+      color: rgb(207, 39, 39);
+      padding-left: 10px;
+      font-weight:600;
+    }
+  </style>
+  <body>
+    <table>
+      <tr>
+        <td colspan="2">
+          <h1 style="text-align: center; color: blue">Registration Form</h1>
+        </td>
+      </tr>
+      <tr>
+        <td><label >First Name </label></td>
+        <td>
+          <input onkeyup="fname()" id="i1" type="text" name="fname"  required />
+          <span id="strength">POOR</span>
+        </td>
+      </tr>
+      <tr>
+        <td><label>Last Name: </label></td>
+        <td>
+          <input onkeyup="lname()" id="i2" type="text" name="lname"  required />
+          <span id="strengt">POOR</span>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="email">Email </label></td>
+        <td>
+          <input onkeyup="email()" type="email" name="email" id="i3" required />
+          <span id="streng">POOR</span>
+        </td>
+      </tr>
+      <tr>
+        <td><label >Password: </label></td>
+        <td>
+          <input onkeyup="pwd()" type="password" name="password" id="i4" required />
+          <span id="stren">POOR</span>
+        </td>
+      </tr>
+      <tr>
+        <td><label >Re-enter Password: </label></td>
+        <td>
+          <input onkeyup="rpwd()" type="password" name="password" id="i5"  required />
+          <span id="stre">MISMATCH</span>
+        </td>
+      </tr>
+      <tr>
+        <td><label>Gender:</label></td>
+        <td>
+          <input
+            style="width: fit-content"
+            type="radio"
+            name="gender"
+            id="male"
+           
+          />
+          Male
+          <br />
+          <input
+            style="width: fit-content"
+            type="radio"
+            name="gender"
+            id="male"
+          />
+          Female
+        </td>
+      </tr>
+      <tr>
+        <td><label >Age</label></td>
+        <td>
+          <input onkeyup="age()" type="number" name="age" id="i6" required />
+          <span id="str">POOR</span>
+        </td>
+        
+      </tr>
+      <tr>
+        <td><label>Phone Number: </label></td>
+        <td>
+          <input onkeyup="num()" type="tel" name="phone" id="i7" />
+          <span id="st">POOR</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label >Address:</label>
+        </td>
+        <td>
+          <textarea
+            onkeyup="add()"
+            name="address"
+            id="i8"
+            cols="40"
+            rows="10"
+            required
+          ></textarea>
+          <span id="s">POOR</span>
+        </td>
+      </tr>
+      <tr>
+        <td><label>State</label></td>
+        <td>
+          <input onkeyup="state()" type="text"  id="i9" required />
+          <span id="sta">POOR</span>
+        </td>
+        
+      </tr>
+      <tr>
+        <td><label >Country</label></td>
+        <td>
+          <select>
+            <option value="none">-Choose your country-</option>
+            <option value="india">India</option>
+            <option value="South Korea">South Korea</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label >Language Known</label>
+        </td>
+        <td>
+          <input
+            style="width: fit-content"
+            type="checkbox"
+            name="lang"
+            id="eng"
+          />
+          English
+          <input
+            style="width: fit-content"
+            type="checkbox"
+            name="lang"
+            id="kannada"
+          />
+          Kannada
+          <input
+            style="width: fit-content"
+            type="checkbox"
+            name="lang"
+            id="Hindi"
+          />
+          Hindi
+          <input
+            style="width: fit-content"
+            type="checkbox"
+            name="lang"
+            id="Telugu"
+          />
+          Telugu
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <input
+            style="width: fit-content"
+            type="checkbox"
+            name="declaration"
+          />
+          Hereby I declare all the given details are true
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <p style="text-align: right;">Log in to <a href="https://ethnus.com" target="_blank">Ethnus</a> website</p>
+        </td>
+      </tr>
+      <tr>
+        <td id="button" colspan="4">
+          <button type="submit">Register</button>
+        </td>
+      </tr>
+    </table>
+
+    <script>
+         function fname() {
+            var fn = document.getElementById("i1").value;
+            if (fn .length == 0) {
+                document.getElementById("strength").innerHTML = "POOR";
+            }
+            else if (fn.length < 5) {
+                document.getElementById("strength").innerHTML = "LESS POOR";
+            }
+            else {
+                document.getElementById("strength").innerHTML = "GOOD";
+            }
+        }
+
+        function lname() {
+            var ln = document.getElementById("i2").value;
+            if (ln .length == 0) {
+                document.getElementById("strengt").innerHTML = "POOR";
+            }
+            else if (ln.length < 5) {
+                document.getElementById("strengt").innerHTML = "LESS POOR";
+            }
+            else {
+                document.getElementById("strengt").innerHTML = "GOOD";
+            }
+        }
+        function email() {
+            var e = document.getElementById("i3").value;
+            if (e .length == 0) {
+                document.getElementById("streng").innerHTML = "POOR";
+            }
+            else if (e.length < 5) {
+                document.getElementById("streng").innerHTML = "LESS POOR";
+            }
+            else {
+                document.getElementById("streng").innerHTML = "GOOD";
+            }
+        }
+        function pwd() {
+            var p = document.getElementById("i4").value;
+            if (p .length == 0) {
+                document.getElementById("stren").innerHTML = "POOR";
+            }
+            else if (p.length < 5) {
+                document.getElementById("stren").innerHTML = "LESS POOR";
+            }
+            else {
+                document.getElementById("stren").innerHTML = "GOOD";
+            }
+        }
+        function rpwd() {
+            var t = document.getElementById("i4").value;
+            var rp = document.getElementById("i5").value;
+            if (t != rp) {
+                document.getElementById("stre").innerHTML = "MISMATCH";
+            }
+           
+            else {
+                document.getElementById("stre").innerHTML = "MATCHES";
+            }
+        }
+        function age() {
+         
+            var a = document.getElementById("i6").value;
+            if (a .length == 0 || a==0 || a<0 ) {
+                document.getElementById("str").innerHTML = "POOR";
+            }
+           
+            else {
+                document.getElementById("str").innerHTML = "GOOD";
+            }
+        }
+        function num() {
+         
+         var a = document.getElementById("i7").value;
+         if (a .length == 0  ) {
+             document.getElementById("st").innerHTML = "POOR";
+         }
+         else if (a.length >10)
+         {
+            document.getElementById("st").innerHTML = "INVALID";
+         }
+        
+         else {
+             document.getElementById("st").innerHTML = "GOOD";
+         }
+     }
+     function add() {
+         
+         var a = document.getElementById("i8").value;
+         if (a .length == 0  ) {
+             document.getElementById("s").innerHTML = "POOR";
+         }
+        
+         else {
+             document.getElementById("s").innerHTML = "GOOD";
+         }
+     }
+     function state() {
+         
+         var a = document.getElementById("i9").value;
+         if (a .length == 0  ) {
+             document.getElementById("sta").innerHTML = "POOR";
+         }
+        
+         else {
+             document.getElementById("sta").innerHTML = "GOOD";
+         }
+     }
+        
+    </script>
+  </body>
+</html>

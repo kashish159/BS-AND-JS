@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK7 JS</title>
+    <style>
+        h2{
+            color:blue;
+        }
+        #i3{
+            position:relative;
+            animation-name: anime1;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-play-state: paused;
+        }
+
+        @keyframes anime1{
+            from{
+                left:0%;
+
+            }
+            to{
+                left:100%;
+            }
+        }
+    </style>
+</head>
+<body>
+       
+        <img src="./pic.png" id="i3" >
+        <br>
+        <br>
+        <center>
+            <h2>Click the following buttons to handle animation</h2>
+            <button onclick="start()">Start</button>
+            <button onclick="stop()">Stop</button>
+        </center>
+       
+        <script>
+            function stop(){
+                document.getElementById("i3").style.animationPlayState="paused";
+            }
+           
+            function start(){
+                document.getElementById("i3").style.animationPlayState="running";
+            }
+            
+        </script>
+        
+</body>
+</html>

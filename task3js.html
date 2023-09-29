@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK3 JS</title>
+    <style>
+        p,label{
+            margin-left: 10px;
+        }
+        input{
+            margin: 10px;
+    
+        }
+        .box{
+            width: 300px;
+            border: 1px solid black;
+            margin: 50px;
+        }
+        input[type=button]{
+            border-radius: 4px;
+        }
+        input[type=button]:hover{
+            border:2px solid rgb(121, 235, 235);
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form class="num" >
+            <table  >
+                <label>1st Number </label>
+                <input type="number" placeholder=" enter num 1" id="i1" required/>
+                <br>
+                <label>2nd Number</label>
+               
+                <input type="number" placeholder=" enter num 2" id="i2" required/>
+                <br>
+                <input type="button" value="Multiply" onClick="mul()" />
+                <input type="button" value="Divide" onClick="div()" />
+                <p >The result is: <span id="ans"></span></p>
+            </table>
+            
+            
+        </form>
+    </div>
+
+    <script>
+        function mul(){
+            n1=document.getElementById("i1").value;
+            n2=document.getElementById("i2").value;
+            document.getElementById("ans").innerHTML = n1 * n2 ;
+        }
+        function div(){
+            n1=document.getElementById("i1").value;
+            n2=document.getElementById("i2").value;
+            document.getElementById("ans").innerHTML = n1 / n2 ;
+        }
+
+  
+        
+    </script>
+   
+</body>
+</html>

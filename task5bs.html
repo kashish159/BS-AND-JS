@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK5 BS</title>
+    <link
+    href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    rel="stylesheet"
+    id="bootstrap-css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+    />
+    <style>
+        .container {
+            display: flex;
+            column-gap: 25px;
+        }
+        label{
+            color:darkred;
+        }
+        .fa{
+            color:darkred;
+        }
+        .input-group-text{
+            border: 2px solid darkred;
+        }
+        .box{
+            margin-bottom: 10px;
+            padding-left: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+        form{
+            max-width: 750px;
+        }
+        input{
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
+
+            <div class="container mt-5">
+                <div class="card bg-light">
+                    <article class="card-body mx-auto">
+                    <form>
+                        <div class="box">
+                            <div class="form-group input-group">
+                                <label class="mx-lg-5" style="font-weight: bold" for="fname">First Name</label>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                </div>
+                                <input
+        
+                                    class="form-control"
+                                    placeholder="First Name"
+                                    type="text"
+                                    required
+                                />
+                                </div>
+                        </div>
+                        <div class="box">
+                            <div class="form-group input-group">
+                                <label class="mx-lg-5" style="font-weight: bold" for="fname">Last Name</label>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                </div>
+                                <input
+    
+                                    class="form-control"
+                                    placeholder="Last name"
+                                    type="text"
+                                    required
+                                />
+                                </div>
+                        </div>
+                         
+                        <div class="box">
+                            <div class="form-group input-group">
+                                <label class="mx-lg-5" style="font-weight: bold" for="email">E-Mail</label>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                    <i class="fa fa-envelope"></i>
+                                    </span>
+                                </div>
+                                <input
+    
+                                    class="form-control"
+                                    placeholder="E-Mail Address"
+                                    type="email"
+                                    required
+                                />
+                                </div>
+                        </div>
+                            
+                        <div class="box">
+                            <div class="form-group input-group">
+                                <label class="mx-lg-5" style="font-weight: bold" for="phone">Phone #</label>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                                </div>
+
+                                <input
+                                    name=""
+                                    class="form-control"
+                                    placeholder="(845)555-1212"
+                                    type="text"
+                                    required
+                                />
+                                </div>
+                        </div>
+                                
+                         <div class="box">
+                            <div class="form-group input-group">
+                                <label class="mx-lg-5" style="font-weight: bold" for="address">Address</label>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-home"></i> </span>
+                                </div>
+                                <input
+                                    name=""
+                                    class="form-control"
+                                    placeholder="Address"
+                                    type="text"
+                                    required
+                                />
+                                </div>
+                         </div>
+                        <div class="box">
+                            <div class="form-group input-group">
+                                <label class="mx-lg-5" style="font-weight: bold" for="city">City</label>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-home"></i> </span>
+                                </div>
+                                <input
+                                    name=""
+                                    class="form-control"
+                                    placeholder="City"
+                                    type="text"
+                                    required
+                                />
+                                </div>
+                        </div>
+                     
+                        <div class="box">
+                            <div class="form-group input-group">
+                                <label class="mx-lg-5" style="font-weight: bold" for="state">State</label>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                    <i class="fa fa-list"></i>
+                                    </span>
+                                </div>
+                                <select class="form-control">
+                                    <option selected="">Please select your state</option>
+                                    <option>Delhi</option>
+                                    <option>Madhya Pradesh</option>
+                                    <option>Karnataka</option>
+                                </select>
+                                </div>
+                        </div>
+                        <div class="box">
+                            <div class="form-group input-group">
+                                <label class="mx-5" style="font-weight: bold" for="hosting">Do you have hosting?</label>
+                                <input
+                                    name="hosting"
+                                    class="form-control"
+                                    style="width: fit-content"
+                                    type="radio"
+                                />
+                                <label> Yes</label>
+                                <br />
+                                <input
+                                    name="hosting"
+                                    class="form-control"
+                                    style="width: fit-content"
+                                    type="radio"
+                                    
+                                />
+                                <label> No</label>
+                                </div>
+                        </div>
+                            
+                        <div class="box">
+                            <div class="form-group input-group">
+                                <label class="mx-lg-5" style="font-weight: bold" >Project Description</label>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-edit"></i> </span>
+                                </div>
+                                <textarea
+                                class="form-control"
+                                    name="description"
+                                    id="description"
+                                    cols="30"
+                                    rows="3"
+                                    placeholder="Project Description"
+                                ></textarea>
+        
+                                </div>
+                                
+                        </div>
+                        <div class="form-group d-flex align-items-center justify-content-center">
+                            <button type="submit" style="color:white" class="btn btn-warning">
+                                Send
+                            </button>
+                        </div>
+                        
+                        
+                    </form>
+                    </article>
+                </div>
+            </div>
+
+
+</body>
+</html>

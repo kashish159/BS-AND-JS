@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK6 JS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+        form {
+          border: 3px solid #e5e1e1;
+          max-width:350px;
+        }
+        button {
+          width: 90%;
+          cursor: pointer;
+          color: white;
+          padding: 10px ;
+          margin:10px 0;
+          align-items: center;
+          
+        }
+        button:hover {
+          opacity: 0.5;
+        }
+  
+        
+        input[type=text] {
+          width: 100%;
+          padding: 10px ;
+          
+          display: inline-block;
+          border: 1px solid #ccc;
+          box-sizing: border-box;
+        }
+        input[type=password]
+        {
+          width: 100%;
+          padding: 10px;
+          display: inline-block;
+          border: 1px solid #ccc;
+          box-sizing: border-box;
+        }
+        
+      
+  
+        .imge {
+          margin: 12px 12px ;
+          text-align: center;
+          width: 100%;
+          
+        }
+        
+        
+        img.insta {
+          width: 50%;
+          border-radius: 80px;
+        }
+        input[type=password]
+        {
+          width: 100%;
+          padding: 10px;
+        }
+        .forgot-password{
+            padding:47px;
+        }
+  
+        .fill {
+          padding: 16px;
+        }
+    </style>
+  
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+         
+            <form class="login-form" name="myform" onsubmit="return validateform()"; >
+                <div class="imge">
+                    <img src="img.png"  class="insta">
+                </div>
+                
+           
+                <div class="fill">
+                    <label><b>Username</b></label>
+                    <input name="name" type="text" placeholder="Enter Username" required>
+                
+                    <label><b>Password</b></label>
+                    <input name="password" type="password" placeholder="Enter Password" required>
+                
+                    
+                </div>
+                <button class="login-button bg-primary center mx-3 " type="submit" title="login">Log In</button>
+                
+                <div class="other">
+                    <label>
+                        <input type="checkbox" name="remember" class="display-3 ms-3"> Remember me
+                    </label>
+
+                    <a class="forgot-password me-3" href="#">Forgot pwd?</a>
+                    
+                </div>
+            </form>
+        </div>
+        <div class="box">
+            <p class="ms-3">Don't have an account? <a class="signup" href="#">Sign up here </a></p>
+        </div>
+    </div>
+    <script>  
+      function validateform(){  
+          var name=document.myform.name.value;  
+          var password=document.myform.password.value;  
+            
+         if(password.length<6 ){  
+            alert("Password must be at least 6 characters long.");  
+            return false;  
+            } 
+          else if (name.length<3 ){
+            alert("Username too short!");  
+            return false;  
+            } 
+          }
+       
+      </script> 
+</body>
+</html>

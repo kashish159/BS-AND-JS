@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK4 JS</title>
+    <style>
+        input [type="button"]{
+               
+                margin: 20px;
+                padding: 20px;
+        }
+    </style>
+   
+</head>
+<body>
+
+        <input type="button" value="show date" onClick="date()" />
+        <p ><span id="i1"></span></p>
+        <input type="button" value="show time" onClick="time()" />
+        <p ><span id="i2"></span></p>
+   
+    <script>
+        function date(){
+            const obj= new Date();
+            var day=obj.getDate();
+            var M=obj.getMonth();
+            var yr=obj.getYear();
+            var months=["january","february","march","april","may","june","july",
+        "august","september","october","november","december"];
+            var mon=months[M];
+            document.getElementById("i1").innerHTML = (day + "/" + mon + "/" + (yr+1900) );
+
+        }
+        function time(){
+            var tz=new Date();
+            document.getElementById("i2").innerHTML =tz;
+
+
+        }
+       
+      
+    </script>
+    
+</body>
+</html>
